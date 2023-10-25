@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Forside Turskobutikken</title>
+        <link href="css/font/css/fontawesome.css" rel="stylesheet">
+        <link href="css/font/css/brands.css" rel="stylesheet">
+        <link href="css/font/css/solid.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="grid-hovedlayout">
+            <header class="linje">
+                <span>
+                    <a href="index.html">LOGO</a>
+                </span>
+                <nav>
+                    <ul class="navigasjonsliste">
+                        <li><a href="#"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #000000;"></i></a></li>
+                        <li class="handlekurv"><a href="#"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #000000;"></i></a></li>
+                        <li class="hamburger"><a href="#"><i id="hamburgerikon" class="fa-solid fa-bars fa-2xl"></i></a>
+                            <ul class="menypunkter">
+                                <li><a href="index.html">Hjem</a></li>
+                                <li><a href="kategori1.html">Kvinner</a></li>
+                                <li><a href="#">Menn</a></li>
+                                <li><a href="#">Barn</a></li>
+                                <li><a href="#">Min side</a></li>
+                                <li id="handlekurv-tekst"><a href="#">Handlekurv</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div id="grid-forside">
+                    <section id="videosnutt">
+                        <article>
+                            <video id="video" autoplay muted loop> <!--Kilde for videotag (i tillegg til Webtricks LMS for kurset): https://www.gumlet.com/learn/how-to-autoplay-html-video/ -->
+                                <source src="video/woman-shoe.mp4" type="video/mp4">
+                                Your browser does not support the embedded video.
+                            </video>
+                            <p class="bildekilde">
+                                Stock footage provided by <a class="link author-link-popup" target="_blank" href="https://www.videvo.net/author/vidfy-Freepik/#rs=attribution-modal">Freepik</a>,
+                                downloaded from <a class="videvo-redirect" target="_blank" href="https://www.videvo.net/#rs=attribution-modal">videvo.net</a>
+                            </p>
+                        </article>
+                    </section>
+                    <section id="produkt">
+                        <article>
+                            <a href="produkt.html"><img src="img/product-1.jpg" alt="En blå joggesko"></a>
+                            <p class="bildekilde">Image by <a href="https://pixabay.com/no/users/stux-12364/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371625">Stefan Schweihofer</a> from <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371625">Pixabay</a></p>
+                            <h2><a href="produkt.html">Produkt 1</a></h2>
+                            <p>1299kr</p>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="img/product-2.jpg" alt="En rosa joggesko">
+                            <p class="bildekilde">Image by <a href="https://pixabay.com/no/users/stux-12364/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371624">Stefan Schweihofer</a> from <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371624">Pixabay</a></p>
+                            <h2>Produkt 2</h2>
+                            <p>1099kr</p>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                            </div>
+                        </article>
+                    </section>
+                    <section id="nyheter">
+                        <article>
+                            <img src="img/news-white-shoes.jpg" alt="Føtter med hvite joggesko på">
+                            <p class="bildekilde">Bildet er tatt av <a href="https://pixabay.com/no/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1840619">Pexels</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1840619">Pixabay</a></p>
+                            <h2>Sesongens nyheter</h2>
+                        </article>
+                    </section>
+                    <section id="kategorier">
+                        <article>
+                            <a href="kategori1.html"><img src="img/category-women.jpg" alt="Kvinnelige bein med sko på"></a>
+                            <p class="bildekilde">Image by <a href="https://pixabay.com/users/apostolosv-10903109/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3857758">Apostolos Vamvouras</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3857758">Pixabay</a></p>
+                            <h2><a href="kategori1.html">Kvinner</a></h2>
+                        </article>
+                        <article>
+                            <img src="img/category-men.jpg" alt="Mannlige bein med sko på">
+                            <p class="bildekilde">Image by <a href="https://pixabay.com/users/engin_akyurt-3656355/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3740358">Engin Akyurt</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3740358">Pixabay</a></p>
+                            <h2>Menn</h2>
+                        </article>
+                        <article>
+                            <img src="img/category-children.jpg" alt="To barn som danser sammen">
+                            <p class="bildekilde">Image by <a href="https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2599441">StockSnap</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2599441">Pixabay</a></p>
+                            <h2>Barn</h2>
+                        </article>
+                    </section>
+                </div>
+            </main>
+            <footer>
+                <p>Kontakt oss:</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                    <li id="instagram"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                    <li><a href="https://www.snapchat.com/"><i class="fa-brands fa-snapchat fa-2xl"></i></a></li>
+                </ul>
+                <p>© Martine Resberg Kihl, 2023</p>
+            </footer>
+        </div>
+        <script>
+            let x = document.querySelector(".menypunkter")
+
+            document.getElementById("hamburgerikon").addEventListener("click", (e)=>{
+                if(x.className === "menypunkter") {
+                    x.className += " responsive"
+                } else {
+                    x.className = "menypunkter"
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Produktside Turskobutikken</title>
+        <link href="css/font/css/fontawesome.css" rel="stylesheet">
+        <link href="css/font/css/brands.css" rel="stylesheet">
+        <link href="css/font/css/solid.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="grid-produkt-layout">
+            <header class="linje">
+                <span>
+                    <a href="index.html">LOGO</a>
+                </span>
+                <nav>
+                    <ul class="navigasjonsliste">
+                        <li><a href="#"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #000000;"></i></a></li>
+                        <li class="handlekurv"><a href="#"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #000000;"></i></a></li>
+                        <li class="hamburger"><a href="#"><i id="hamburgerikon" class="fa-solid fa-bars fa-2xl"></i></a>
+                            <ul class="menypunkter">
+                                <li><a href="index.html">Hjem</a></li>
+                                <li><a href="kategori1.html">Kvinner</a></li>
+                                <li><a href="#">Menn</a></li>
+                                <li><a href="#">Barn</a></li>
+                                <li><a href="#">Min side</a></li>
+                                <li id="handlekurv-tekst"><a href="#">Handlekurv</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section class="breadcrumb">
+                    <a href="index.html">Hjem</a>
+                    <p>></p>
+                    <a href="kategori1.html">Kvinner</a>
+                    <p>></p>
+                    <a href="produkt.html">Produkt 1</a>
+                </section>
+                <section id="produktbilde">
+                    <article>
+                        <img src="img/product-1.jpg" alt="En blå joggesko">
+                        <p class="bildekilde">Bildet er tatt av <a href="https://pixabay.com/no/users/stux-12364/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371625">Stefan Schweihofer</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371625">Pixabay</a></p>
+                    </article>
+                </section>
+                <section id="minibilder">
+                    <!--Her har jeg lagt inn en placeholder for hvert av de små bildene, siden jeg kun har ett bilde av dette produktet. Ideen er egentlig at det skulle vært forskjellige bilder det samme produktet (forskjellige vinkler og sider osv.)-->
+                    <article>
+                        <img src="https://placehold.co/90x90" alt="Placeholder for bilde av produkt 1">
+                    </article>
+                    <article>
+                        <img src="https://placehold.co/90x90" alt="Placeholder for bilde av produkt 1">
+                    </article>
+                    <article>
+                        <img src="https://placehold.co/90x90" alt="Placeholder for bilde av produkt 1">
+                    </article>
+                    <article>
+                        <img src="https://placehold.co/90x90" alt="Placeholder for bilde av produkt 1">
+                    </article>
+                    <article>
+                        <img src="https://placehold.co/90x90" alt="Placeholder for bilde av produkt 1">
+                    </article>
+                    <article>
+                        <img src="https://placehold.co/90x90" alt="Placeholder for bilde av produkt 1">
+                    </article>
+                </section>
+                <section id="produkt-info">
+                    <h2 class="text-right">Produkt 1</h2>
+                    <p id="pris" class="text-right">1299 kr</p>
+                    <form method="post">
+                        <label for="size">Velg størrelse:</label>
+                        <select id="size" name="size">
+                            <option>36</option>
+                            <option>37</option>
+                            <option>38</option>
+                            <option>39</option>
+                            <option>40</option>
+                            <option>41</option>
+                            <option>42</option>
+                            <option>40</option>
+                            <option>44</option>
+                            <option>45</option>
+                        </select>
+                    </form>
+                    <a href="#">Legg til i handlevogn</a>
+                    <div id="praktisk-info">
+                        <p class="frakt-retur">Leveres innen 5 virkedager.</p>
+                        <p class="frakt-retur">50 dager gratis retur og bytte.</p>
+                    </div>
+                </section>
+                <section id="produkt-detaljer">
+                    <article class="linje">
+                        <p>Detaljer om produktet</p>
+                        <i class="fa-solid fa-plus fa-2xl"></i>
+                    </article>
+                    <article class="linje">
+                        <p>Beskrivelse av produktet</p>
+                        <i class="fa-solid fa-plus fa-2xl"></i>
+                    </article>
+                    <article class="linje">
+                        <p>Informasjon om frakt, levering og retur</p>
+                        <i class="fa-solid fa-plus fa-2xl"></i>
+                    </article>
+                </section>
+                <section id="kundevurderinger">
+                    <h3>Kundevurderinger</h3>
+                    <article class="linje">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <p>"Your Wheezy, sir, your Wheezy-Wheezy who is giving Dobby his sweater!"</p>
+                    </article>
+                    <article class="linje">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>"I've been putting out fires all week. People keep sending Howlers, and of course, if you don't open a Howler straight away, it explodes. Scorch marks all over my desk and my best quill reduced to cinders."</p>
+                    </article>
+                    <article class="linje">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <p>"If you ask me, Mr. Crouch is very lucky no one at the Daily Prophet knows how mean he is to elves!"</p>
+                    </article>
+                </section>
+            </main>
+            <footer>
+                <p>Kontakt oss:</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                    <li id="instagram"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                    <li><a href="https://www.snapchat.com/"><i class="fa-brands fa-snapchat fa-2xl"></i></a></li>
+                </ul>
+                <p>© Martine Resberg Kihl, 2023</p>
+            </footer>
+        </div>
+        <script>
+            let x = document.querySelector(".menypunkter")
+
+            document.getElementById("hamburgerikon").addEventListener("click", (e)=>{
+                if(x.className === "menypunkter") {
+                    x.className += " responsive"
+                } else {
+                    x.className = "menypunkter"
+                }
+            })
+        </script>
+    </body>
+</html>

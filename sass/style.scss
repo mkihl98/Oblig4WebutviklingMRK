@@ -1,0 +1,908 @@
+*{
+    box-sizing: border-box;
+}
+/*Litt generelle kommentarer:
+- Noen av fontawesome.com-filene kloner seg selv og legger seg utenfor CSS-mappa. Jeg har prøvd å slette dem, siden de samme filene ligger inne i font-mappa, men de dukker opp igjen med en gang jeg går inn i stilarket mitt.
+- Jeg lagde en egen mappe til video, ettersom jeg har en video-loop på forsiden min. Jeg ville skille mellom video og bilder, som var grunnen til at jeg lagde en egen mappe. Håper det er greit, selv om det blir en ekstra mappe i prosjektet.
+- Jeg har først og fremst brukt HTML- og CSS-filene vi har kodet sammen i forelesningene i Webutvikling som inspirasjon til oppsettet mitt, både i HTML og i CSS. Jeg velger å skrive dette her, i stedet for å skrive det overalt i koden min, for minimere rot og støy i koden.
+- I de tilfellene hvor jeg har funnet tips til kode et annet sted enn i noen av kodefilene vi har satt opp i forelesning, har jeg lagt ved link til disse sidene på de aktuelle stedene.
+- Jeg lagde et fellesoppsett i SCSS for de komponentene som skulle være helt like på alle de tre sidene (header-oppsett og footer-oppsett). Disse er plassert øverst i SCSS-koden og @extend-a til hver av sidene.
+- Jeg vil kanskje anbefale å lese/se gjennom koden i SCSS-filen, ettersom det er her jeg faktisk har kodet, og jeg selv i hvertfall opplevde den som mer oversiktlig enn den genererte CSS-filen.
+- Ettersom wireframe-designet mitt var noe komplekst for en nybegynner, har jeg gjort noen små endringer, som feks å fjerne slide-funksjoner. Endringene er små, så nettsidene har for det meste det samme designet som wireframesene*/
+
+
+
+.header-oppsett{
+    /*Oppsett for headeren, som jeg gjenbruker på alle sidene. Den er utformet for mobil, med media queries slik at den endrer seg når skjermen blir større:*/
+
+    header{
+        grid-area: header;
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+        justify-content: space-between;
+
+        span{
+            a{
+                text-decoration: none;
+                font-size: 2rem;
+                font-weight: 800;
+                color: #000;
+            }
+        }
+
+        nav{
+
+            .navigasjonsliste{
+                display: flex;
+                gap: 1.5rem;
+                list-style: none;
+                color: #000;
+
+                .handlekurv{
+                    display: none;
+                }
+                
+                .hamburger{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                    position: relative;
+
+                    a{
+                        padding: 0 0 1rem 0;
+                    }
+                    .menypunkter{
+                        display: none;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        padding: 0;
+                        margin: 1rem 0;
+                        z-index: 50;
+
+                        li{
+                            list-style: none;
+
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                    
+                    .responsive{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        background-color: #575454;
+                        margin: 0;
+                        padding: 0.5rem;
+                        top: 40px;
+                        right: 0;
+
+                        li :hover{
+                            text-decoration: underline;
+                        }
+
+                        a{
+                            display: inline-block;
+                            padding: 0.3rem;
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 800px) {
+        header{
+            justify-content: center;
+            padding: 0 0 3rem 0;
+
+            nav{
+                width: 90%;
+
+                .navigasjonsliste{
+                    flex-flow: row-reverse;
+                    align-items: baseline;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    .handlekurv{
+                        display: block;
+                    }
+
+                    .hamburger{
+                        width: 90%;
+                        height: 35px;
+                        padding: 0 1rem 0 1rem;
+
+                        #hamburgerikon{
+                            display: none;
+                        }
+
+                        .menypunkter{
+                            display: flex;
+                            justify-content: space-between;
+                            position: absolute;
+                            width: 100%;
+                            margin: 0;
+                            top: 10px;
+                            padding: 0 2rem 0 2rem;
+
+                            li{
+                                list-style: none;
+                                font-size: 1.8rem;
+
+                                a{
+                                    color: #000;
+                                }
+                            }
+
+                            #handlekurv-tekst{
+                                display: none;
+                            }
+                        }
+
+                        .responsive{
+                            display: flex;
+                            flex-direction: row;
+                            background-color: #eae6e6;
+                            margin: 0;
+                            padding: 0.5rem;
+                            top: 5px;
+                            right: 0;
+    
+                            a{
+                                display: inline-block;
+                                padding: 0.3rem;
+                                color: #000000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+.footer-oppsett{
+    /*Oppsett for footer, som jeg gjenbruker på alle sidene. Den er utviklet for mobil, men med flex slik at den tilpasser seg skjermstørrelsen når skjermen blir større:*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        width: 30%;
+        justify-content: center;
+
+        li{
+            list-style: none;
+
+            a{
+                list-style: none;
+                color: #000;
+                padding: 0.5rem;
+
+                .fa-brands:hover{
+                    /*Jeg fant tips til hvordan man kan gjøre fontawesome-ikoner større når man hovrer over dem,
+                    og brukte den første foreslåtte løsningen fra denne siden: https://stackoverflow.com/questions/35566603/make-font-awesome-icon-size-increase-on-mouseover*/
+                    font-size: 3.5rem;
+                    transition: 0.5s ease-out;
+                }
+            }
+        }
+
+        #instagram{
+            padding: 0 1.7rem;
+        }
+    }
+}
+
+/*Oppsett inne i body for sidene starter her. Har brukt @extend for å legge inn header-oppsett og footer-oppsett på hver av sidene, for å unngå å skrive samme kode tre ganger.*/
+body{
+    background-color: #eae6e6;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .grid-hovedlayout{
+        /*Forside mobil: Grid til hovedkomponentene (header, main og footer)*/
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "header"
+                            "main"
+                            "footer";
+
+        @extend .header-oppsett;
+        
+        main{
+            grid-area: main;
+
+            #grid-forside{
+            /*Forside mobil: Grid til hovedkomponentene inne i main (fire forskjellige <section> med hver sin #id).
+            Jeg ville bruke grid på denne måten for å få testet ut grid litt mer, og siden det virket ut som en god løsning
+            for å få nettsiden til å utforme seg på den måten jeg har designet i wireframes. Ann-Charlott sa også at det gikk
+            fint å bruke to grids på én side, så lenge jeg holder god kontroll over de:*/
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, auto);
+
+                #videosnutt{
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 1;
+                    grid-row-end: 2;
+
+                    article{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 1rem;
+
+                        #video{
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #produkt{
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                    display: flex;
+
+                    article{
+                        padding: 1rem;
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        img{
+                            width: 100%;
+                        }
+
+                        h2{
+                            margin: 0 0 0.3rem 0.3rem;
+    
+                            a{
+                                text-decoration: none;
+                                color: #000;
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+    
+                        p{
+                            margin: 0 0 0.5rem 0.3rem;
+                        }
+                    }
+                }
+
+                #nyheter{
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 3;
+                    grid-row-end: 4;
+
+                    article{
+                        padding: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        img{
+                            width: 100%;
+                        }
+
+                        h2{
+                            margin: 0.4rem 0 0.3rem 0.3rem;
+    
+                            a{
+                                text-decoration: none;
+                                color: #000;
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #kategorier{
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 4;
+                    grid-row-end: 5;
+                    display: flex;
+
+                    article{
+                        padding: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        img{
+                            width: 100%;
+                        }
+
+                        h2{
+                            margin: 0.4rem 0 0.3rem 0.3rem;
+    
+                            a{
+                                text-decoration: none;
+                                color: #000;
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (min-width: 700px) {
+                #grid-forside{
+                    /*Forside desktop: Grid til hovedkomponentene inne i main (fire forskjellige <section> med hver sin #id)*/
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-template-rows: repeat(4, auto);
+                    padding: 2rem 0 0 0;
+
+                    #videosnutt{
+                        grid-column-start: 3;
+                        grid-column-end: 5;
+                        grid-row-start: 1;
+                        grid-row-end: 3;
+                    }
+
+                    #produkt{
+                        grid-column-start: 1;
+                        grid-column-end: 3;
+                        grid-row-start: 1;
+                        grid-row-end: 3;
+                    }
+
+                    #nyheter{
+                        grid-column-start: 1;
+                        grid-column-end: 3;
+                        grid-row-start: 3;
+                        grid-row-end: 5;
+                    }
+
+                    #kategorier{
+                        grid-column-start: 3;
+                        grid-column-end: 5;
+                        grid-row-start: 3;
+                        grid-row-end: 5;
+                    }
+                }
+            }
+        }
+
+        footer{
+            grid-area: footer;
+            @extend .footer-oppsett;
+        }
+    }
+
+    @media only screen and (min-width: 700px) {
+        .grid-hovedlayout{
+            /*Forside desktop: Grid til hovedkomponentene i body (header, main og footer) når skjermen blir større*/
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, auto);
+            margin: 1rem;
+
+            header{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+
+            main{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            footer{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+        }
+    }
+
+    #grid-kategori-layout{
+        /*Kategoriside mobil: Grid til hovedkomponentene (header, aside, main og footer)*/
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "header"
+                            "aside"
+                            "main"
+                            "footer";
+
+        @extend .header-oppsett;
+
+        main{
+            grid-area: main;
+
+            .breadcrumb{
+                @extend .smulesti;
+            }
+
+            section{
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+
+                h1{
+                    width: 100%;
+                    font-size: 2.7rem;
+                    margin: 0 0 1rem 0;
+                }
+
+                article{
+                    padding: 1rem;
+                    width: 50%;
+
+                    img{
+                        width: 100%;
+                    }
+
+                    h2{
+                        margin: 0.5rem 0 0.3rem 0.3rem;
+
+                        a{
+                            text-decoration: none;
+                            color: #000;
+
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    p{
+                        margin: 0 0 0 0.3rem;
+                    }
+                }
+            }
+        }
+        
+        aside{
+            grid-area: aside;
+            padding: 1rem 1rem 0 1rem;
+
+            .fa-arrow-down-wide-short{
+                display: flex;
+                justify-content: end;
+                margin: 1rem 0 0 0;
+            }
+
+            #filter-section{
+                /*Filter-seksjonen er usynlig på mobilversjon. Ideen er at denne skulle ha dukket opp når man trykker på filter-ikonet (.fa-arrow-down-wide-short) på mobilversjonen, 
+                mens hele seksjonen synes når man er på desktop. Jeg har ikke lagt på javascript for å gjøre filter-ikonet klikkbart, ettersom dette ikke var nødvendig for å svare på oppgaven.*/
+                display: none;
+                flex-direction: column;
+                margin: 4rem 0 0 0;
+
+                h3{
+                    padding: 0 0 0 1rem;
+                    font-size: 2rem;
+                }
+
+                #first-filter{
+                    border-top: 2px solid #000;
+                }
+
+                article{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: baseline;
+
+                    p{
+                        padding: 0.5rem 0 1rem 1rem;
+                        font-size: 1.5rem;
+                        font-weight: 550;
+                    }
+
+                    .fa-plus{
+                        padding: 0.1rem 0.5rem 0 0;
+                    }
+                }
+            }
+        }
+
+        footer{
+            grid-area: footer;
+            @extend .footer-oppsett;
+        }
+    }
+
+    @media only screen and (min-width: 800px) {
+        #grid-kategori-layout{
+            /*Kategoriside desktop: Grid til hovedkomponentene (header, aside, main og footer) når skjermen blir større*/
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(4, auto);
+            margin: 1rem;
+
+            header{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+
+            main{
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 4;
+
+                section{
+
+                    h1{
+                        margin: 1rem 0 1rem 1rem;
+                        padding: 0 0 2rem 1rem;
+                        border-bottom: 2px solid #000;
+                    }
+                    article{
+                        width: 33%;
+                    }
+                }
+            }
+        
+            aside{
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 4;
+
+                .fa-arrow-down-wide-short{
+                    display: none;
+                }
+
+                #filter-section{
+                    display: flex;
+                }
+            }
+
+            footer{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 4;
+                grid-row-end: 5;
+            }
+        }
+    }
+
+    #grid-produkt-layout{
+        /*Produktside mobil: Grid til hovedkomponentene (header, main, aside og footer)*/
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "header"
+                            "main"
+                            "footer";
+
+        @extend .header-oppsett;
+
+        main{
+            grid-area: main;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .breadcrumb{
+                @extend .smulesti;
+            }
+
+            #produktbilde{
+                article{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+            #minibilder{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0.5rem 0 0 0;
+
+                article{
+                    display: flex;
+                    justify-content: space-between;
+
+                    img{
+                        width: 100%;
+                        padding: 0 1rem 0 0;
+                    }
+                }
+            }
+
+            #produkt-info{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 2rem 2rem 0 0.5rem;
+
+                p{
+                    width: 100%;
+                }
+
+                .text-right{
+                    display: flex;
+                    width: 50%;
+                    margin: 0;
+                    font-size: 2rem;
+                }
+
+                #pris{
+                    display: flex;
+                    justify-content: end;
+                }
+
+                form{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 3rem 0 1rem 0;
+                    width: 100%;
+
+                    label{
+                        font-size: 1.5rem;
+                        align-self: center;
+                    }
+
+                    select{ /*På utformingen av select har jeg tatt utgangspunkt i hva Ann-Charlott gjorde på sitt select-felt i index.html i mappen "HTML-skjema" i github-repository for Webutvikling:*/
+                        flex-basis: 60%;
+                        border-radius: 6px;
+                        border: 0.4px solid #000;
+                        font-size: 1.2rem;
+                        text-align: center;
+                    }
+                }
+
+                a{
+                    display: flex;
+                    justify-content: center;
+                    text-decoration: none;
+                    width: 100%;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    border: 0.4px solid #000;
+                    padding: 1rem 0.3rem;
+                    margin: 1rem 0 0 0;
+                    font-size: 1.9rem;
+                    color: #000;
+                    align-content: center;
+                }
+
+                #praktisk-info{
+                    .frakt-retur{
+                        font-style: italic;
+                        margin: 0.4rem 0 0.4rem 0;
+                    }
+                }
+            }
+
+            #produkt-detaljer{
+                margin: 1rem 0 0 0;
+                padding: 0 1rem 0 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                article{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: baseline;
+
+                    p{
+                        padding: 0.5rem 0 0.8rem 1rem;
+                        font-size: 1.3rem;
+                        font-weight: 550;
+                    }
+
+                    .fa-plus{
+                        padding: 2rem 1rem 0 0;
+                    }
+                }
+            }
+
+            #kundevurderinger{
+                display: flex;
+                flex-direction: column;
+                background-color: #ffffff;
+                margin: 2rem 0.4rem;
+                padding: 0 0.5rem 1rem 0.5rem;
+    
+                h3{
+                    font-size: 1.3rem;
+                }
+    
+                article{
+                    .fa-star, .fa-star-half-stroke{
+                        padding: 0.5rem 0 0 0;
+                    }
+                }
+            }
+        }
+
+        footer{
+            grid-area: footer;
+            @extend .footer-oppsett;
+        }
+    }
+
+    @media only screen and (min-width: 700px) {
+        #grid-produkt-layout{
+            /*Produktside desktop: Grid for hovedkomponentene (header, main, aside og footer) når skjermen blir større*/
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(4, auto);
+            margin: 1rem;
+
+            header{
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+
+            main{
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 2;
+                grid-row-end: 4;
+
+                #produktbilde{
+                    width: 50%;
+                }
+
+                #minibilder{
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    padding: 0 0 0 1rem;
+                    width: 20%;
+
+                    article{
+                        width: 50%;
+                        padding: 0 1rem 0 0;
+
+                        img{
+                            padding: 0;
+                        }
+                    }
+                }
+
+                #produkt-info{
+                    width: 30%;
+                    margin: 0;
+
+                    .text-right{
+                        justify-content: end;
+                        width: 100%;
+                        font-size: 3.5rem;
+                    }
+
+                    #pris{
+                        font-size: 2rem;
+                    }
+
+                    form{
+                        margin: 1rem 0;
+
+                        select{
+                            height: fit-content;
+                            align-self: center;
+                        }
+                    }
+
+                    a{
+                        align-self: center;
+                    }
+
+                    #praktisk-info{
+                        .frakt-retur{
+                            margin: 0.4rem 0;
+                        }
+                    }
+                }
+
+                #produkt-detaljer{
+                    width: 50%;
+                }
+
+                #kundevurderinger{
+                    width: 48%;
+                    margin: 1rem 0 0 0.7rem;
+
+                    article{
+                        width: 100%;
+                    }
+                }
+            }
+
+            footer{
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 4;
+                grid-row-end: 5;
+            }
+        }
+    }
+}
+
+/*Brødsmulesti til kategori- og produktsiden*/
+.smulesti{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    align-items: baseline;
+    padding: 0 0 1rem 0.5rem;
+
+    p{
+        margin: 0.2rem 0.4rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: #000;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+/*Felles design for alle bildetekstene (kildene til de forskjellige bildene jeg har brukt fra Pixabay) på alle sidene:*/
+.bildekilde{
+    margin: 0;
+    font-size: 0.6rem;
+    align-self: self-start;
+
+    a{
+        text-decoration: none;
+        color: #000;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+/*Fargejustering på alle ikonene fra fontawesome.com*/
+.fa-magnifying-glass, .fa-cart-shopping, .fa-bars, .fa-arrow-down-wide-short, .fa-plus{
+    color: #000;
+}
+
+.fa-star, .fa-star-half-stroke{
+    color: #f0b510;
+}
+
+/*Kilde for oppsett av rette linjer i CSS: https://www.shecodes.io/athena/5273-create-straight-and-horizontal-lines-with-css*/
+.linje{
+    border-bottom: 2px solid #000;
+}
