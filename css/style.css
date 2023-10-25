@@ -11,41 +11,41 @@
 - Jeg lagde et fellesoppsett i SCSS for de komponentene som skulle være helt like på alle de tre sidene (header-oppsett og footer-oppsett). Disse er plassert øverst i SCSS-koden og @extend-a til hver av sidene.
 - Jeg vil kanskje anbefale å lese/se gjennom koden i SCSS-filen, ettersom det er her jeg faktisk har kodet, og jeg selv i hvertfall opplevde den som mer oversiktlig enn den genererte CSS-filen.
 - Ettersom wireframe-designet mitt var noe komplekst for en nybegynner, har jeg gjort noen små endringer, som feks å fjerne slide-funksjoner. Endringene er små, så nettsidene har for det meste det samme designet som wireframesene*/
-.header-oppsett, body #grid-produkt-layout, body #grid-kategori-layout, body .grid-hovedlayout {
+.header-oppsett, body #grid-analyse, body #grid-produkt-layout, body #grid-kategori-layout, body .grid-hovedlayout {
   /*Oppsett for headeren, som jeg gjenbruker på alle sidene. Den er utformet for mobil, med media queries slik at den endrer seg når skjermen blir større:*/
 }
-.header-oppsett header, body #grid-produkt-layout header, body #grid-kategori-layout header, body .grid-hovedlayout header {
+.header-oppsett header, body #grid-analyse header, body #grid-produkt-layout header, body #grid-kategori-layout header, body .grid-hovedlayout header {
   grid-area: header;
   display: flex;
   align-items: baseline;
   width: 100%;
   justify-content: space-between;
 }
-.header-oppsett header span a, body #grid-produkt-layout header span a, body #grid-kategori-layout header span a, body .grid-hovedlayout header span a {
+.header-oppsett header span a, body #grid-analyse header span a, body #grid-produkt-layout header span a, body #grid-kategori-layout header span a, body .grid-hovedlayout header span a {
   text-decoration: none;
   font-size: 2rem;
   font-weight: 800;
   color: #000;
 }
-.header-oppsett header nav .navigasjonsliste, body #grid-produkt-layout header nav .navigasjonsliste, body #grid-kategori-layout header nav .navigasjonsliste, body .grid-hovedlayout header nav .navigasjonsliste {
+.header-oppsett header nav .navigasjonsliste, body #grid-analyse header nav .navigasjonsliste, body #grid-produkt-layout header nav .navigasjonsliste, body #grid-kategori-layout header nav .navigasjonsliste, body .grid-hovedlayout header nav .navigasjonsliste {
   display: flex;
   gap: 1.5rem;
   list-style: none;
   color: #000;
 }
-.header-oppsett header nav .navigasjonsliste .handlekurv, body #grid-produkt-layout header nav .navigasjonsliste .handlekurv, body #grid-kategori-layout header nav .navigasjonsliste .handlekurv, body .grid-hovedlayout header nav .navigasjonsliste .handlekurv {
+.header-oppsett header nav .navigasjonsliste .handlekurv, body #grid-analyse header nav .navigasjonsliste .handlekurv, body #grid-produkt-layout header nav .navigasjonsliste .handlekurv, body #grid-kategori-layout header nav .navigasjonsliste .handlekurv, body .grid-hovedlayout header nav .navigasjonsliste .handlekurv {
   display: none;
 }
-.header-oppsett header nav .navigasjonsliste .hamburger, body #grid-produkt-layout header nav .navigasjonsliste .hamburger, body #grid-kategori-layout header nav .navigasjonsliste .hamburger, body .grid-hovedlayout header nav .navigasjonsliste .hamburger {
+.header-oppsett header nav .navigasjonsliste .hamburger, body #grid-analyse header nav .navigasjonsliste .hamburger, body #grid-produkt-layout header nav .navigasjonsliste .hamburger, body #grid-kategori-layout header nav .navigasjonsliste .hamburger, body .grid-hovedlayout header nav .navigasjonsliste .hamburger {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   position: relative;
 }
-.header-oppsett header nav .navigasjonsliste .hamburger a, body #grid-produkt-layout header nav .navigasjonsliste .hamburger a, body #grid-kategori-layout header nav .navigasjonsliste .hamburger a, body .grid-hovedlayout header nav .navigasjonsliste .hamburger a {
+.header-oppsett header nav .navigasjonsliste .hamburger a, body #grid-analyse header nav .navigasjonsliste .hamburger a, body #grid-produkt-layout header nav .navigasjonsliste .hamburger a, body #grid-kategori-layout header nav .navigasjonsliste .hamburger a, body .grid-hovedlayout header nav .navigasjonsliste .hamburger a {
   padding: 0 0 1rem 0;
 }
-.header-oppsett header nav .navigasjonsliste .hamburger .menypunkter, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter {
+.header-oppsett header nav .navigasjonsliste .hamburger .menypunkter, body #grid-analyse header nav .navigasjonsliste .hamburger .menypunkter, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter {
   display: none;
   font-size: 1rem;
   font-weight: 600;
@@ -53,16 +53,16 @@
   margin: 1rem 0;
   z-index: 50;
 }
-.header-oppsett header nav .navigasjonsliste .hamburger .menypunkter li, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter li, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter li, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter li {
+.header-oppsett header nav .navigasjonsliste .hamburger .menypunkter li, body #grid-analyse header nav .navigasjonsliste .hamburger .menypunkter li, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter li, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter li, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter li {
   list-style: none;
 }
-.header-oppsett header nav .navigasjonsliste .hamburger .menypunkter li:hover, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter li:hover, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter li:hover, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter li:hover {
+.header-oppsett header nav .navigasjonsliste .hamburger .menypunkter li:hover, body #grid-analyse header nav .navigasjonsliste .hamburger .menypunkter li:hover, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter li:hover, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter li:hover, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter li:hover {
   text-decoration: underline;
 }
-.header-oppsett header nav .navigasjonsliste .hamburger .menypunkter a, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter a, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter a, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter a {
+.header-oppsett header nav .navigasjonsliste .hamburger .menypunkter a, body #grid-analyse header nav .navigasjonsliste .hamburger .menypunkter a, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter a, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter a, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter a {
   text-decoration: none;
 }
-.header-oppsett header nav .navigasjonsliste .hamburger .responsive, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .responsive, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .responsive, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .responsive {
+.header-oppsett header nav .navigasjonsliste .hamburger .responsive, body #grid-analyse header nav .navigasjonsliste .hamburger .responsive, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .responsive, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .responsive, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .responsive {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -72,40 +72,40 @@
   top: 40px;
   right: 0;
 }
-.header-oppsett header nav .navigasjonsliste .hamburger .responsive li :hover, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .responsive li :hover, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .responsive li :hover, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .responsive li :hover {
+.header-oppsett header nav .navigasjonsliste .hamburger .responsive li :hover, body #grid-analyse header nav .navigasjonsliste .hamburger .responsive li :hover, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .responsive li :hover, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .responsive li :hover, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .responsive li :hover {
   text-decoration: underline;
 }
-.header-oppsett header nav .navigasjonsliste .hamburger .responsive a, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .responsive a, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .responsive a, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .responsive a {
+.header-oppsett header nav .navigasjonsliste .hamburger .responsive a, body #grid-analyse header nav .navigasjonsliste .hamburger .responsive a, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .responsive a, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .responsive a, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .responsive a {
   display: inline-block;
   padding: 0.3rem;
   color: #ffffff;
 }
 @media only screen and (min-width: 800px) {
-  .header-oppsett header, body #grid-produkt-layout header, body #grid-kategori-layout header, body .grid-hovedlayout header {
+  .header-oppsett header, body #grid-analyse header, body #grid-produkt-layout header, body #grid-kategori-layout header, body .grid-hovedlayout header {
     justify-content: center;
     padding: 0 0 3rem 0;
   }
-  .header-oppsett header nav, body #grid-produkt-layout header nav, body #grid-kategori-layout header nav, body .grid-hovedlayout header nav {
+  .header-oppsett header nav, body #grid-analyse header nav, body #grid-produkt-layout header nav, body #grid-kategori-layout header nav, body .grid-hovedlayout header nav {
     width: 90%;
   }
-  .header-oppsett header nav .navigasjonsliste, body #grid-produkt-layout header nav .navigasjonsliste, body #grid-kategori-layout header nav .navigasjonsliste, body .grid-hovedlayout header nav .navigasjonsliste {
+  .header-oppsett header nav .navigasjonsliste, body #grid-analyse header nav .navigasjonsliste, body #grid-produkt-layout header nav .navigasjonsliste, body #grid-kategori-layout header nav .navigasjonsliste, body .grid-hovedlayout header nav .navigasjonsliste {
     flex-flow: row-reverse;
     align-items: baseline;
     width: 100%;
     justify-content: space-between;
   }
-  .header-oppsett header nav .navigasjonsliste .handlekurv, body #grid-produkt-layout header nav .navigasjonsliste .handlekurv, body #grid-kategori-layout header nav .navigasjonsliste .handlekurv, body .grid-hovedlayout header nav .navigasjonsliste .handlekurv {
+  .header-oppsett header nav .navigasjonsliste .handlekurv, body #grid-analyse header nav .navigasjonsliste .handlekurv, body #grid-produkt-layout header nav .navigasjonsliste .handlekurv, body #grid-kategori-layout header nav .navigasjonsliste .handlekurv, body .grid-hovedlayout header nav .navigasjonsliste .handlekurv {
     display: block;
   }
-  .header-oppsett header nav .navigasjonsliste .hamburger, body #grid-produkt-layout header nav .navigasjonsliste .hamburger, body #grid-kategori-layout header nav .navigasjonsliste .hamburger, body .grid-hovedlayout header nav .navigasjonsliste .hamburger {
+  .header-oppsett header nav .navigasjonsliste .hamburger, body #grid-analyse header nav .navigasjonsliste .hamburger, body #grid-produkt-layout header nav .navigasjonsliste .hamburger, body #grid-kategori-layout header nav .navigasjonsliste .hamburger, body .grid-hovedlayout header nav .navigasjonsliste .hamburger {
     width: 90%;
     height: 35px;
     padding: 0 1rem 0 1rem;
   }
-  .header-oppsett header nav .navigasjonsliste .hamburger #hamburgerikon, body #grid-produkt-layout header nav .navigasjonsliste .hamburger #hamburgerikon, body #grid-kategori-layout header nav .navigasjonsliste .hamburger #hamburgerikon, body .grid-hovedlayout header nav .navigasjonsliste .hamburger #hamburgerikon {
+  .header-oppsett header nav .navigasjonsliste .hamburger #hamburgerikon, body #grid-analyse header nav .navigasjonsliste .hamburger #hamburgerikon, body #grid-produkt-layout header nav .navigasjonsliste .hamburger #hamburgerikon, body #grid-kategori-layout header nav .navigasjonsliste .hamburger #hamburgerikon, body .grid-hovedlayout header nav .navigasjonsliste .hamburger #hamburgerikon {
     display: none;
   }
-  .header-oppsett header nav .navigasjonsliste .hamburger .menypunkter, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter {
+  .header-oppsett header nav .navigasjonsliste .hamburger .menypunkter, body #grid-analyse header nav .navigasjonsliste .hamburger .menypunkter, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -114,17 +114,17 @@
     top: 10px;
     padding: 0 2rem 0 2rem;
   }
-  .header-oppsett header nav .navigasjonsliste .hamburger .menypunkter li, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter li, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter li, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter li {
+  .header-oppsett header nav .navigasjonsliste .hamburger .menypunkter li, body #grid-analyse header nav .navigasjonsliste .hamburger .menypunkter li, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter li, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter li, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter li {
     list-style: none;
     font-size: 1.8rem;
   }
-  .header-oppsett header nav .navigasjonsliste .hamburger .menypunkter li a, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter li a, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter li a, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter li a {
+  .header-oppsett header nav .navigasjonsliste .hamburger .menypunkter li a, body #grid-analyse header nav .navigasjonsliste .hamburger .menypunkter li a, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter li a, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter li a, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter li a {
     color: #000;
   }
-  .header-oppsett header nav .navigasjonsliste .hamburger .menypunkter #handlekurv-tekst, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter #handlekurv-tekst, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter #handlekurv-tekst, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter #handlekurv-tekst {
+  .header-oppsett header nav .navigasjonsliste .hamburger .menypunkter #handlekurv-tekst, body #grid-analyse header nav .navigasjonsliste .hamburger .menypunkter #handlekurv-tekst, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .menypunkter #handlekurv-tekst, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .menypunkter #handlekurv-tekst, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .menypunkter #handlekurv-tekst {
     display: none;
   }
-  .header-oppsett header nav .navigasjonsliste .hamburger .responsive, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .responsive, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .responsive, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .responsive {
+  .header-oppsett header nav .navigasjonsliste .hamburger .responsive, body #grid-analyse header nav .navigasjonsliste .hamburger .responsive, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .responsive, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .responsive, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .responsive {
     display: flex;
     flex-direction: row;
     background-color: #eae6e6;
@@ -133,42 +133,42 @@
     top: 5px;
     right: 0;
   }
-  .header-oppsett header nav .navigasjonsliste .hamburger .responsive a, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .responsive a, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .responsive a, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .responsive a {
+  .header-oppsett header nav .navigasjonsliste .hamburger .responsive a, body #grid-analyse header nav .navigasjonsliste .hamburger .responsive a, body #grid-produkt-layout header nav .navigasjonsliste .hamburger .responsive a, body #grid-kategori-layout header nav .navigasjonsliste .hamburger .responsive a, body .grid-hovedlayout header nav .navigasjonsliste .hamburger .responsive a {
     display: inline-block;
     padding: 0.3rem;
     color: #000000;
   }
 }
 
-.footer-oppsett, body #grid-produkt-layout footer, body #grid-kategori-layout footer, body .grid-hovedlayout footer {
+.footer-oppsett, body #grid-analyse footer, body #grid-produkt-layout footer, body #grid-kategori-layout footer, body .grid-hovedlayout footer {
   /*Oppsett for footer, som jeg gjenbruker på alle sidene. Den er utviklet for mobil, men med flex slik at den tilpasser seg skjermstørrelsen når skjermen blir større:*/
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2rem 0;
 }
-.footer-oppsett ul, body #grid-produkt-layout footer ul, body #grid-kategori-layout footer ul, body .grid-hovedlayout footer ul {
+.footer-oppsett ul, body #grid-analyse footer ul, body #grid-produkt-layout footer ul, body #grid-kategori-layout footer ul, body .grid-hovedlayout footer ul {
   display: flex;
   flex-direction: row;
   padding: 0;
   width: 30%;
   justify-content: center;
 }
-.footer-oppsett ul li, body #grid-produkt-layout footer ul li, body #grid-kategori-layout footer ul li, body .grid-hovedlayout footer ul li {
+.footer-oppsett ul li, body #grid-analyse footer ul li, body #grid-produkt-layout footer ul li, body #grid-kategori-layout footer ul li, body .grid-hovedlayout footer ul li {
   list-style: none;
 }
-.footer-oppsett ul li a, body #grid-produkt-layout footer ul li a, body #grid-kategori-layout footer ul li a, body .grid-hovedlayout footer ul li a {
+.footer-oppsett ul li a, body #grid-analyse footer ul li a, body #grid-produkt-layout footer ul li a, body #grid-kategori-layout footer ul li a, body .grid-hovedlayout footer ul li a {
   list-style: none;
   color: #000;
   padding: 0.5rem;
 }
-.footer-oppsett ul li a .fa-brands:hover, body #grid-produkt-layout footer ul li a .fa-brands:hover, body #grid-kategori-layout footer ul li a .fa-brands:hover, body .grid-hovedlayout footer ul li a .fa-brands:hover {
+.footer-oppsett ul li a .fa-brands:hover, body #grid-analyse footer ul li a .fa-brands:hover, body #grid-produkt-layout footer ul li a .fa-brands:hover, body #grid-kategori-layout footer ul li a .fa-brands:hover, body .grid-hovedlayout footer ul li a .fa-brands:hover {
   /*Jeg fant tips til hvordan man kan gjøre fontawesome-ikoner større når man hovrer over dem,
   og brukte den første foreslåtte løsningen fra denne siden: https://stackoverflow.com/questions/35566603/make-font-awesome-icon-size-increase-on-mouseover*/
   font-size: 3.5rem;
   transition: 0.5s ease-out;
 }
-.footer-oppsett ul #instagram, body #grid-produkt-layout footer ul #instagram, body #grid-kategori-layout footer ul #instagram, body .grid-hovedlayout footer ul #instagram {
+.footer-oppsett ul #instagram, body #grid-analyse footer ul #instagram, body #grid-produkt-layout footer ul #instagram, body #grid-kategori-layout footer ul #instagram, body .grid-hovedlayout footer ul #instagram {
   padding: 0 1.7rem;
 }
 
@@ -680,23 +680,88 @@ body #grid-produkt-layout footer {
     grid-row-end: 5;
   }
 }
+body #grid-analyse {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "main" "footer";
+}
+body #grid-analyse main {
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body #grid-analyse main .breadcrumb {
+  justify-content: flex-start;
+}
+body #grid-analyse main #keywords {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body #grid-analyse main #keywords h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body #grid-analyse main #keywords article img {
+  width: 100%;
+}
+body #grid-analyse main #seo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body #grid-analyse footer {
+  grid-area: footer;
+}
+@media only screen and (min-width: 700px) {
+  body #grid-analyse {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    margin: 1rem;
+  }
+  body #grid-analyse header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  body #grid-analyse main {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  body #grid-analyse main section article {
+    width: 30%;
+  }
+  body #grid-analyse footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
 
 /*Brødsmulesti til kategori- og produktsiden*/
-.smulesti, body #grid-kategori-layout main .breadcrumb, body #grid-produkt-layout main .breadcrumb {
+.smulesti, body #grid-kategori-layout main .breadcrumb, body #grid-produkt-layout main .breadcrumb, body #grid-analyse main .breadcrumb {
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
   align-items: baseline;
   padding: 0 0 1rem 0.5rem;
 }
-.smulesti p, body #grid-kategori-layout main .breadcrumb p, body #grid-produkt-layout main .breadcrumb p {
+.smulesti p, body #grid-kategori-layout main .breadcrumb p, body #grid-produkt-layout main .breadcrumb p, body #grid-analyse main .breadcrumb p {
   margin: 0.2rem 0.4rem;
 }
-.smulesti a, body #grid-kategori-layout main .breadcrumb a, body #grid-produkt-layout main .breadcrumb a {
+.smulesti a, body #grid-kategori-layout main .breadcrumb a, body #grid-produkt-layout main .breadcrumb a, body #grid-analyse main .breadcrumb a {
   text-decoration: none;
   color: #000;
 }
-.smulesti a:hover, body #grid-kategori-layout main .breadcrumb a:hover, body #grid-produkt-layout main .breadcrumb a:hover {
+.smulesti a:hover, body #grid-kategori-layout main .breadcrumb a:hover, body #grid-produkt-layout main .breadcrumb a:hover, body #grid-analyse main .breadcrumb a:hover {
   text-decoration: underline;
 }
 

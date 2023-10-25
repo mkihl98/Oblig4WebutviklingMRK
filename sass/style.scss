@@ -853,6 +853,94 @@ body{
             }
         }
     }
+
+    #grid-analyse{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "header"
+                            "main"
+                            "footer";
+
+        @extend .header-oppsett;
+        
+        main{
+            grid-area: main;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .breadcrumb{
+                @extend .smulesti;
+                justify-content: flex-start;
+            }
+
+            #keywords{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                h2{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                article{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+            #seo{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+
+        footer{
+            grid-area: footer;
+            @extend .footer-oppsett;
+        }
+    }
+
+    @media only screen and (min-width: 700px) {
+        #grid-analyse{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, auto);
+            margin: 1rem;
+
+            header{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+
+            main{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+
+                section{
+                    article{
+                        width: 30%;
+                    }
+                }
+            }
+
+            footer{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+        }
+    }
 }
 
 /*Brødsmulesti til kategori- og produktsiden*/
