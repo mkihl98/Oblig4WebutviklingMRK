@@ -713,6 +713,35 @@ body #grid-analyse main #seo {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+body #grid-analyse main #seo h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body #grid-analyse main #universell-utforming h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body #grid-analyse main #universell-utforming article {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body #grid-analyse main #universell-utforming article h3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body #grid-analyse main #universell-utforming article img {
+  width: 100%;
+}
+body #grid-analyse main #universell-utforming article p {
+  width: 100%;
 }
 body #grid-analyse footer {
   grid-area: footer;
@@ -737,6 +766,13 @@ body #grid-analyse footer {
   }
   body #grid-analyse main section article {
     width: 30%;
+  }
+  body #grid-analyse main #universell-utforming article img {
+    width: 25%;
+  }
+  body #grid-analyse main #universell-utforming article p {
+    width: 25%;
+    padding: 0 1rem;
   }
   body #grid-analyse footer {
     grid-column-start: 1;
