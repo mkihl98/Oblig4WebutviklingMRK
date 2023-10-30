@@ -720,6 +720,12 @@ body #grid-analyse main #seo h2 {
   display: flex;
   justify-content: center;
 }
+body #grid-analyse main #universell-utforming {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
 body #grid-analyse main #universell-utforming h2 {
   width: 100%;
   display: flex;
@@ -730,7 +736,8 @@ body #grid-analyse main #universell-utforming article {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding: 0 1rem;
 }
 body #grid-analyse main #universell-utforming article h3 {
   width: 100%;
@@ -741,6 +748,34 @@ body #grid-analyse main #universell-utforming article img {
   width: 100%;
 }
 body #grid-analyse main #universell-utforming article p {
+  width: 100%;
+}
+body #grid-analyse main #chat-gpt {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+body #grid-analyse main #chat-gpt h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body #grid-analyse main #chat-gpt article {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+body #grid-analyse main #chat-gpt article h3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body #grid-analyse main #chat-gpt article img {
   width: 100%;
 }
 body #grid-analyse footer {
@@ -767,12 +802,20 @@ body #grid-analyse footer {
   body #grid-analyse main section article {
     width: 30%;
   }
+  body #grid-analyse main #universell-utforming article {
+    width: 50%;
+  }
   body #grid-analyse main #universell-utforming article img {
-    width: 25%;
+    width: 50%;
+    max-width: 300px;
+    max-height: 450px;
   }
   body #grid-analyse main #universell-utforming article p {
-    width: 25%;
+    width: 50%;
     padding: 0 1rem;
+  }
+  body #grid-analyse main #chat-gpt article {
+    width: 50%;
   }
   body #grid-analyse footer {
     grid-column-start: 1;
