@@ -720,6 +720,22 @@ body #grid-analyse main #seo h2 {
   display: flex;
   justify-content: center;
 }
+body #grid-analyse main #seo article {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+body #grid-analyse main #seo article h3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body #grid-analyse main #seo article img {
+  width: 100%;
+}
 body #grid-analyse main #universell-utforming {
   display: flex;
   flex-direction: row;
@@ -801,6 +817,10 @@ body #grid-analyse footer {
   }
   body #grid-analyse main section article {
     width: 30%;
+  }
+  body #grid-analyse main #seo article {
+    width: 50%;
+    padding: 0 2rem;
   }
   body #grid-analyse main #universell-utforming article {
     width: 50%;
