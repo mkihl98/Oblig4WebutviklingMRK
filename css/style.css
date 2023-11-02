@@ -713,7 +713,7 @@ body #grid-analyse main #seo {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: baseline;
 }
 body #grid-analyse main #seo h2 {
   width: 100%;

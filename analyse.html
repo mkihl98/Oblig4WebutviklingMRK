@@ -54,15 +54,22 @@
                     </article>
                 </section>
                 <section id="seo">
-                    <h2>SEO-analyse</h2>
+                    <h2>SEO-analyse i Lighthouse</h2>
                     <article>
-                        <h3>Forside</h3>
+                        <h3>Resultater for mobil</h3>
                         <img src="analysebilder/lighthouse-forside-mobil.png" alt="Resultater fra lighthouse-analyse av forsiden på mobil.">
-                        <p>Forsidens mobiloppsett: Siden dette er en SEO-analyse, vil hovedfokuset være på tilbakemeldingene gitt på SEO i analysen. SEO-scoren er 83 av 100. Det lighthouse gir tilbakemelding på i forbindelse med SEO, er "document does not have a meta description" og "document doesn't use legible font sizes - 25% legible text". Meta description er noe jeg kan legge inn i head-området på nettsiden min ved å bruke en meta-tag. Fontstørrelsen som SEO-analysen reagerer på angår alle kildehenvisningene til bilder jeg har brukt fra Pixabay. Disse kildehenvisningene hadde ikke vært der dersom det hadde vært en faktisk skobutikk som brukte sine egne bilder, som også var grunnen til at jeg gjorde kildehenvisningene så små. Utover dette er en tilbakemelding på accessibility-analysen at enkelte av linkene mine ikke har navn - dette gjelder fontawesome-ikonene som det er satt lenke på - og performance-analysen påpeker at bildene mine er store, som fører til at nettsiden lastes litt tregere.</p>
-                        <img src="analysebilder/lighthouse-forside-desktop.png" alt="Resultater fra lighthouse-analyse av forsiden på desktop.">
-                        <p>Forsidens desktopoppsett: Da jeg kjørte samme analyse på desktop-versjonen av forsiden, fikk jeg de samme tilbakemeldingene om meta description og navn på linker, som nevnt ovenfor, men ellers var alt bra.</p>
+                        <p>Siden dette er en SEO-analyse, vil hovedfokuset være på tilbakemeldingene gitt på SEO i analysen. På bildet ovenfor er scoren som ble gitt til mobilversjonen av forsiden min. SEO-scoren er 83 av 100. Det lighthouse gir tilbakemelding på i forbindelse med SEO, er "document does not have a meta description" og "document doesn't use legible font sizes - 25% legible text".</p>
+                        <p>Meta description er noe jeg kan legge inn i head-området på nettsiden min ved å bruke en meta-tag. Fontstørrelsen som SEO-analysen reagerer på angår alle kildehenvisningene til bilder jeg har brukt fra Pixabay. Disse kildehenvisningene hadde ikke vært der dersom det hadde vært en faktisk skobutikk som brukte sine egne bilder, som også var grunnen til at jeg gjorde kildehenvisningene så små.</p>
+                        <p>Utover dette er en tilbakemelding på accessibility-analysen at enkelte av linkene mine ikke har navn - dette gjelder fontawesome-ikonene som det er satt lenke på - og performance-analysen påpeker at bildene mine er store, som fører til at nettsiden lastes litt tregere. Jeg lastet ned den de minste bildefilene fra Pixabay, og kommer derfor ikke til å gjøre noe med dette i denne oppgavebesvarelsen.</p>
+                        <p>Scoren som blir gitt på mobilversjonen til kategorisiden og produktsiden min er tilnærmet lik, og de problemene som tas opp er de samme som for forsiden.</p>
                     </article>
                     <article>
+                        <h3>Resultater for desktop</h3>
+                        <img src="analysebilder/lighthouse-forside-desktop.png" alt="Resultater fra lighthouse-analyse av forsiden på desktop.">
+                        <p>På bildet ovenfor vises scoren lighthouse ga til desktopversjonen av forsiden min. Da jeg kjørte samme analyse på desktop-versjonen av forsiden, fikk jeg de samme tilbakemeldingene om meta description og navn på linker, som nevnt i resultatene til mobilversjonen, men ellers var alt bra.</p>
+                        <p>Det samme gjelder desktopversjonen av kategorisiden og produktsiden, med unntak av at Best Practices-scoren får noe trekk på produktsiden på grunn av placeholderne jeg har satt inn i mangel på flere bilder av det samme produktet. Dette er derimot utenfor hovedfokuset for denne analysen.</p>
+                    </article>
+                    <!--<article>
                         <h3>Kategoriside</h3>
                         <img src="analysebilder/lighthouse-kategoriside-mobil.png" alt="Resultater fra lighthouse-analyse av kategorisiden på mobil.">
                         <p>Kategorisidens mobiloppsett: På mobilversjonen av kategorisiden får jeg akkurat de samme tilbakemeldingene som nevnt for mobilversjonen av forsiden.</p>
@@ -75,24 +82,27 @@
                         <p>Produktsidens mobiloppsett: </p>
                         <img src="analysebilder/lighthouse-produktside-desktop.png" alt="Resultater fra lighthouse-analyse av produktsiden på desktop.">
                         <p>Produktsidens desktopoppsett: </p>
-                    </article>
+                    </article>-->
                 </section>
                 <section id="universell-utforming">
                     <h2>Analyse for universell utforming</h2>
                     <article>
                         <h3>Forside</h3>
                         <img src="analysebilder/webaim-forside-details.png" alt="Skjermbilde av detaljene rundt feilene som ble avdekket av Webaim-analysen av forsiden.">
-                        <p>Webaim-analysen av forsiden viser 6 errors og 10 alerts. De 6 feilene handler om at jeg har lagt link på ikonene jeg har lagt inn på siden - i headeren og i footeren. Linkene inneholder derfor ingen tekst som skjermopplesere kan lese opp for å fortelle hva linken fører til. 7 av de 10 alertsene handler om tekst som jeg har satt i for liten font-størrelse. Jeg har også fått en alert fordi nettsiden mangler en h1-overskrift, at en av linkene i headeren fører til samme nettside som jeg linker fra, og at det befinner seg en video på siden.</p>
+                        <p>Webaim-analysen av forsiden viser 6 errors og 10 alerts. De 6 feilene handler om at jeg har lagt link på ikonene jeg har lagt inn på siden - i headeren og i footeren. Linkene inneholder derfor ingen tekst som skjermopplesere kan lese opp for å fortelle hva linken fører til.</p>
+                        <p>7 av de 10 alertsene handler om tekst som jeg har satt i for liten font-størrelse. Jeg har også fått en alert fordi nettsiden mangler en h1-overskrift, at en av linkene i headeren fører til samme nettside som jeg linker fra, og at det befinner seg en video på siden.</p>
                     </article>
                     <article>
                         <h3>Kategoriside</h3>
                         <img src="analysebilder/webaim-kategoriside-details.png" alt="Skjermbilde av detaljene rundt feilene som ble avdekket av Webaim-analysen av kategorisiden.">
-                        <p>Webaim-analysen av kategorisiden viser 7 errors og 17 alerts. De 7 feilene handler om at jeg har lagt inn link på ikonene jeg har lagt inn på siden (de samme feilene som på forsiden), og at jeg har en overskrift som ikke inneholder noen skrift, fordi jeg har satt filterikonet inne i denne overskriften. 9 av de 17 alertsene handler om for liten tekst på bildekildene, på samme måte som på forsiden. 7 av alertsene handler om tekst som ikke er satt som overskrift, men som analyseverktøyet lurer på om burde vært overskrifter. Også her er det en link som linker til samme nettside som jeg linker fra, og det er hva den siste alerten angår.</p>
+                        <p>Webaim-analysen av kategorisiden viser 7 errors og 17 alerts. De 7 feilene handler om at jeg har lagt inn link på ikonene jeg har lagt inn på siden (de samme feilene som på forsiden), og at jeg har en overskrift som ikke inneholder noen skrift, fordi jeg har satt filterikonet inne i denne overskriften.</p> 
+                        <p>9 av de 17 alertsene handler om for liten tekst på bildekildene, på samme måte som på forsiden. 7 av alertsene handler om tekst som ikke er satt som overskrift, men som analyseverktøyet lurer på om burde vært overskrifter. Også her er det en link som linker til samme nettside som jeg linker fra, og det er hva den siste alerten angår.</p>
                     </article>
                     <article>
                         <h3>Produktside</h3>
                         <img src="analysebilder/webaim-produktside-details.png" alt="Skjermbilde av detaljene rundt feilene som ble avdekket av Webaim-analysen av produktsiden.">
-                        <p>Webaim-analysen av produktsiden viser 6 errors og 4 alerts. De 6 feilene på produktsiden er akkurat de samme 6 errors som dukket opp på forsiden, fordi disse angår headeren og footeren, som er lik på alle sider. En av de 4 alertsene handler om at nettsiden mangler en h1-overskrift, en handler om at analyseverktøyet lurer på om en tekst som er satt i en p-tagg burde vært en overskrift, en handler om en link som linker til samme side som det linkes fra, og den siste handler om at det er for liten font-størrelse på bildekilden.</p>
+                        <p>Webaim-analysen av produktsiden viser 6 errors og 4 alerts. De 6 feilene på produktsiden er akkurat de samme 6 errors som dukket opp på forsiden, fordi disse angår headeren og footeren, som er lik på alle sider.</p>
+                        <p>En av de 4 alertsene handler om at nettsiden mangler en h1-overskrift, en handler om at analyseverktøyet lurer på om en tekst som er satt i en p-tagg burde vært en overskrift, en handler om en link som linker til samme side som det linkes fra, og den siste handler om at det er for liten font-størrelse på bildekilden.</p>
                     </article>
                 </section>
                 <section id="chat-gpt">
@@ -126,16 +136,26 @@
                         <caption>Resultater</caption>
                         <thead>
                             <tr>
-                                <th>Lighthouse</th>
-                                <th>Webaim</th>
-                                <th>ChatGPT</th>
+                                <th scope="col">Anbefalinger</th>
+                                <th scope="col">Lighthouse</th>
+                                <th scope="col">Webaim</th>
+                                <th scope="col">ChatGPT</th>
                             </tr>
                         </thead>
+                        <tbody>
                         <tr>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>100</td>
+                            <th scope="row">Legge til meta description</th>
+                            <td>Ja</td>
+                            <td>Nei</td>
+                            <td>Ja</td>
                         </tr>
+                        <tr>
+                            <th scope="row">Større font på kildehenvisninger</th>
+                            <td>Ja</td>
+                            <td>Ja</td>
+                            <td>Nei</td>
+                        </tr>
+                        </tbody>
                     </table>
                 </section>
                 <section>
