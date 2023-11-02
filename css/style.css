@@ -794,6 +794,38 @@ body #grid-analyse main #chat-gpt article h3 {
 body #grid-analyse main #chat-gpt article img {
   width: 100%;
 }
+body #grid-analyse main #tabell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+body #grid-analyse main #tabell h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body #grid-analyse main #tabell table {
+  border-collapse: collapse;
+}
+body #grid-analyse main #tabell table caption {
+  font-weight: bold;
+}
+body #grid-analyse main #tabell table thead th {
+  border: 1px solid;
+  padding: 0.5rem;
+  background-color: #cecbcb;
+}
+body #grid-analyse main #tabell table tbody th {
+  border: 1px solid;
+  padding: 0.5rem;
+  background-color: #cecbcb;
+}
+body #grid-analyse main #tabell table tbody td {
+  border: 1px solid;
+  text-align: center;
+  padding: 0.5rem;
+}
 body #grid-analyse footer {
   grid-area: footer;
 }
@@ -822,20 +854,23 @@ body #grid-analyse footer {
     width: 50%;
     padding: 0 2rem;
   }
+  body #grid-analyse main #seo article img {
+    max-width: 665px;
+    max-height: 345px;
+  }
   body #grid-analyse main #universell-utforming article {
     width: 50%;
   }
   body #grid-analyse main #universell-utforming article img {
-    width: 50%;
-    max-width: 300px;
-    max-height: 450px;
-  }
-  body #grid-analyse main #universell-utforming article p {
-    width: 50%;
-    padding: 0 1rem;
+    max-width: 290px;
+    max-height: 375px;
   }
   body #grid-analyse main #chat-gpt article {
     width: 50%;
+  }
+  body #grid-analyse main #chat-gpt article img {
+    max-width: 700px;
+    max-height: 400px;
   }
   body #grid-analyse footer {
     grid-column-start: 1;

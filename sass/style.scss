@@ -994,6 +994,49 @@ body{
                     }
                 }
             }
+
+            #tabell{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+
+                h2{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                table{
+                    border-collapse: collapse;
+
+                    caption{
+                        font-weight: bold;
+                    }
+
+                    thead{
+                        th{
+                            border: 1px solid;
+                            padding: 0.5rem;
+                            background-color: #cecbcb;
+                        }
+                    }
+
+                    tbody{
+                        th{
+                            border: 1px solid;
+                            padding: 0.5rem;
+                            background-color: #cecbcb;
+                        }
+
+                        td{
+                            border: 1px solid;
+                            text-align: center;
+                            padding: 0.5rem;
+                        }
+                    }
+                }
+            }
         }
 
         footer{
@@ -1031,6 +1074,11 @@ body{
                     article{
                         width: 50%;
                         padding: 0 2rem;
+
+                        img{
+                            max-width: 665px;
+                            max-height: 345px;
+                        }
                     }
                 }
 
@@ -1039,14 +1087,8 @@ body{
                         width: 50%;
 
                         img{
-                            width: 50%;
-                            max-width: 300px;
-                            max-height: 450px;
-                        }
-
-                        p{
-                            width: 50%;
-                            padding: 0 1rem;
+                            max-width: 290px;
+                            max-height: 375px;
                         }
                     }
                 }
@@ -1054,6 +1096,11 @@ body{
                 #chat-gpt{
                     article{
                         width: 50%;
+
+                        img{
+                            max-width: 700px;
+                            max-height: 400px;
+                        }
                     }
                 }
             }
