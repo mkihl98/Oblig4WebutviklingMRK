@@ -123,7 +123,7 @@
                         <p>ChatGPT påpeker at jeg mangler metadataen description. Utover dette får jeg tips til ting jeg kan sjekke og kontrollere på siden for å sikre at nettsiden er tilgjengelig. ChatGPT mener at jeg har alt-tekst på alle lenkene mine, selv om jeg vet at dette mangler på en del ikoner.</p>
                         <img src="analysebilder/chatGPT-kategoriside-UU.png" alt="Skjermbilde av ChatGPT sin UU-vurdering av kategorisiden.">
                         <p>På bildet ovenfor er ChatGPT sin vurdering av UU på kategorisiden min.</p>
-                        <p>ChatGPT påpeker at jeg mangler tastaturnavigasjon på siden min, siden dette ville gitt bedre tilgjengelighet for hamburgermenyen.</p>
+                        <p>ChatGPT påpeker at jeg mangler tastaturnavigasjon på hamburgermenyen min, siden dette ville gitt bedre tilgjengelighet for hamburgermenyen.</p>
                     </article>
                     <article>
                         <h3>Produktside</h3>
@@ -132,7 +132,7 @@
                         <p>ChatGPT påpeker at jeg mangler metadata i form av description og keywords på siden min. I tillegg blir det påpekt at lenkene i menyen min mangler ankertekst.</p>
                         <img src="analysebilder/chatGPT-produktside-UU.png" alt="Skjermbilde av ChatGPT sin UU-vurdering av produktsiden.">
                         <p>På bildet ovenfor er ChatGPT sin vurdering av UU på produktsiden min.</p>
-                        <p>ChatGPT påpeker at placeholderne mine ikke gir god nok informasjon, og at jeg bør endre dette til noe mer beskrivende. Jeg får forslag om å legge til ARIA-attributter for å forbedre dynamisk innhold, samt tastaturnavigasjon i menyen min. Det blir også påpekt at det kan være lurt å se på andre metoder for å flytte tekst mot høyre, enn å benytte "text-right", ettersom dette kan skape tilgjengeligshetsproblemer for brukere som leser skrift fra høyre til venstre. Til slutt blir det påpekt at kundevurderingene på siden mangler forfattere og datoer, noe som kan redusere tilliten til vurderingene.</p>
+                        <p>ChatGPT påpeker at placeholderne mine ikke gir god nok informasjon, og at jeg bør endre dette til noe mer beskrivende. Jeg får forslag om å legge til ARIA-attributter for å forbedre dynamisk innhold, samt tastaturnavigasjon i menyen min. Det blir også påpekt at det kan være lurt å se på andre metoder for å flytte tekst mot høyre, enn å benytte "text-right", men ettersom jeg ikke faktisk har benyttet "text-right" i stilarket mitt (har bare gitt det navnet til en class), velger jeg å se bort ifra dette. Til slutt blir det påpekt at kundevurderingene på siden mangler forfattere og datoer, noe som kan redusere tilliten til vurderingene.</p>
                     </article>
                 </section>
                 <section id="tabell">
@@ -161,8 +161,47 @@
                             <td>Ja</td>
                             <td>Nei</td>
                         </tr>
+                        <tr>
+                            <th scope="row">Legge til navn på linkene</th>
+                            <td>Ja</td>
+                            <td>Ja</td>
+                            <td>Ja</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Legge til h1-overskrift</th>
+                            <td>Nei</td>
+                            <td>Ja</td>
+                            <td>Nei</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Overskrift uten tekst</th>
+                            <td>Nei</td>
+                            <td>Ja</td>
+                            <td>Nei</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Legge til keywords</th>
+                            <td>Nei</td>
+                            <td>Nei</td>
+                            <td>Ja</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Legge til ARIA-attributter</th>
+                            <td>Nei</td>
+                            <td>Nei</td>
+                            <td>Ja</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Legge til forfatter/dato på kundevurderinger</th>
+                            <td>Nei</td>
+                            <td>Nei</td>
+                            <td>Ja</td>
+                        </tr>
                         </tbody>
                     </table>
+                    <p>I tabellen ovenfor har jeg listet opp de mest relevante anbefalingene jeg har fått av analysene, samt hvilke av analyseverktøyene som har gitt meg disse anbefalingene. Jeg har forsøkt å holde meg til UU-tilsynets anbefalinger om å ikke presentere større mengder med tekst i tabeller. Dette er grunnen til at jeg valgte å strukturere tabellen på denne måten.</p>
+                    <p>Resultatene viser at det er ganske stor forskjell på hva de forskjellige verktøyene påpeker av feil, noe som fremhever viktigheten av å bruke flere forskjellige analyseverktøy. Den eneste anbefalingen jeg har fått av alle tre verktøyene, er å gi linkene mine navn. Det skal likevel påpekes at ChatGPT ikke har hatt tilgang til stilsettingen til siden min, og derfor kunne ikke den gi meg en anbefaling om å justere fontstørrelsen.</p>
+                    <p></p>
                 </section>
                 <section>
                     <h2>Forbedringstiltak</h2>

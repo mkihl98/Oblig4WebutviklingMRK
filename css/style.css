@@ -806,6 +806,7 @@ body #grid-analyse main #tabell h2 {
   justify-content: center;
 }
 body #grid-analyse main #tabell table {
+  /*Kilde for styling av tabell: https://www.w3schools.com/css/css_table.asp*/
   border-collapse: collapse;
 }
 body #grid-analyse main #tabell table caption {
