@@ -827,6 +827,17 @@ body #grid-analyse main #tabell table tbody td {
   text-align: center;
   padding: 0.5rem;
 }
+body #grid-analyse main #tiltak {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body #grid-analyse main #tiltak h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 body #grid-analyse footer {
   grid-area: footer;
 }
@@ -873,6 +884,10 @@ body #grid-analyse footer {
     max-width: 700px;
     max-height: 400px;
   }
+  body #grid-analyse main #tiltak article {
+    width: 50%;
+    padding: 0 2rem;
+  }
   body #grid-analyse footer {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -903,7 +918,7 @@ body #grid-analyse footer {
 /*Felles design for alle bildetekstene (kildene til de forskjellige bildene jeg har brukt fra Pixabay) på alle sidene:*/
 .bildekilde {
   margin: 0;
-  font-size: 0.6rem;
+  font-size: 1rem;
   align-self: self-start;
 }
 .bildekilde a {
