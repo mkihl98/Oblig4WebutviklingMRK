@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
+        <meta name="description" content="Analyseresultater av turskobutikkens SEO og universelle utforming, samt forbedringstiltak">
+        <meta name="keywords" content="Analyse, SEO, Universell utforming">
         <title>Analyser av turskobutikken</title>
         <link href="css/font/css/fontawesome.css" rel="stylesheet">
         <link href="css/font/css/brands.css" rel="stylesheet">
@@ -17,9 +19,9 @@
                 </span>
                 <nav>
                     <ul class="navigasjonsliste">
-                        <li><a href="#"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #000000;"></i></a></li>
-                        <li class="handlekurv"><a href="#"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #000000;"></i></a></li>
-                        <li class="hamburger"><a href="#"><i id="hamburgerikon" class="fa-solid fa-bars fa-2xl"></i></a>
+                        <li><a href="#" aria-label="Søk"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #000000;"></i></a></li>
+                        <li class="handlekurv"><a href="#" aria-label="Handlekurv"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #000000;"></i></a></li>
+                        <li class="hamburger"><a href="#" aria-label="Hamburgermeny"><i id="hamburgerikon" class="fa-solid fa-bars fa-2xl"></i></a>
                             <ul class="menypunkter">
                                 <li><a href="index.html">Hjem</a></li>
                                 <li><a href="kategori1.html">Kvinner</a></li>
@@ -206,9 +208,15 @@
                         <h3>Universell utforming</h3>
                         <p>Jeg har gjort følgende endringer for å forbedre tilgjengeligheten på nettstedet mitt, basert på analysene som er dokumentert ovenfor:</p>
                         <ul>
-                            <li></li>
-                            <li></li>
+                            <li>Lagt til navn på linkene som har FontAwesome-ikoner</li>
+                            <!--Jeg har brukt følgende kilde i tillegg til forelesningsnotater for å finne ut hvordan jeg kan sette inn ARIA-attributter: https://www.w3schools.com/accessibility/accessibility_labels.php-->
+                            <li>Lagt til ARIA-attributter</li>
+                            <li>Endret h3-tag i aside på kategorisiden til en p-tag</li>
                         </ul>
+                        <p>Det å legge til navn på linkene til FontAwesome-ikonene innebar å legge på ARIA-attributter på disse linkene, så derfor overlapper de to punktene hverandre.</p>
+                        <p>Jeg har også endret h3-tagen under aside på kategorisiden til en p-tag, ettersom denne ble tolket som en tom overskrift.</p>
+                        <p>Jeg valgte å ikke legge til h1-overskrift på forsiden selv om Webaim foreslo dette i en alert. Dette fordi jeg ikke finner det naturlig å ha én overskrift som skiller seg ut og er viktigere enn de andre på denne siden. Det samme gjelder produktsiden.</p>
+                        <p>Å legge inn forfatter og dato på kundevurderingene på produktsiden, som ble foreslått av ChatGPT, ble nedprioritert, ettersom kundevurderingene bare er placeholdertekst i form av lorum ipsum.</p>
                     </article>
                 </section>
                 <section>
@@ -218,9 +226,9 @@
             <footer>
                 <p>Kontakt oss:</p>
                 <ul>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
-                    <li id="instagram"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
-                    <li><a href="https://www.snapchat.com/"><i class="fa-brands fa-snapchat fa-2xl"></i></a></li>
+                    <li><a href="https://www.facebook.com/" aria-label="Kontakt oss på Facebook"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                    <li id="instagram"><a href="https://www.instagram.com/" aria-label="Kontakt oss på Instagram"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                    <li><a href="https://www.snapchat.com/" aria-label="Kontakt oss på Snapchat"><i class="fa-brands fa-snapchat fa-2xl"></i></a></li>
                 </ul>
                 <p>© Martine Resberg Kihl, 2023</p>
             </footer>
