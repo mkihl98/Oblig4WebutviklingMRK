@@ -1044,11 +1044,35 @@ body{
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                background-color: #f1eedb;
 
                 h2{
                     width: 100%;
                     display: flex;
                     justify-content: center;
+                }
+            }
+
+            #forbedret{
+                display: flex;
+                flex-direction: column;
+
+                h2{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                article{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    width: 100%;
+
+                    img{
+                        padding: 1rem 0;
+                    }
                 }
             }
         }
@@ -1161,7 +1185,6 @@ body{
 /*Felles design for alle bildetekstene (kildene til de forskjellige bildene jeg har brukt fra Pixabay) på alle sidene:*/
 .bildekilde{
     margin: 0;
-    font-size: 1rem;
     align-self: self-start;
 
     a{

@@ -219,8 +219,37 @@
                         <p>Å legge inn forfatter og dato på kundevurderingene på produktsiden, som ble foreslått av ChatGPT, ble nedprioritert, ettersom kundevurderingene bare er placeholdertekst i form av lorum ipsum.</p>
                     </article>
                 </section>
-                <section>
+                <section id="forbedret">
                     <h2>Resultater av analyser etter forbedringstiltak</h2>
+                    <article>
+                        <img src="analysebilder/lighthouse-forside-mobil-forbedret.png" alt="Forbedret versjon av SEO-analysen for mobiloppsettet på forsiden">
+                        <img src="analysebilder/lighthouse-forside-desktop-forbedret.png" alt="Forbedret versjon av SEO-analysen for desktopoppsettet på forsiden">
+                    </article>
+                    <article>
+                        <img src="analysebilder/webaim-forside-details-forbedret.png" alt="Forbedret Webaim-analyse for forsiden">
+                        <img src="analysebilder/webaim-kategoriside-details-forbedret.png" alt="Forbedret Webaim-analyse for kategorisiden">
+                        <img src="analysebilder/webaim-produktside-details-forbedret.png" alt="Forbedret Webaim-analyse for produktsiden">
+                    </article>
+                    <p>I skjermbildene ovenfor er resultatene av analysene i Lighthouse og Webaim etter forbedringstiltak er gjort på siden. Fra lighthouse-analysen har jeg kun inkludert resultatene på mobil og desktop på forsiden, men de andre sidene mine scorer like bra på alle testene, med unntak av Best Practice-testen på produktsiden, som fortsatt gir tilbakemeldinger på at den ikke er fornøyd med placeholder-boksene jeg har satt inn i stedet for flere bilder av Produkt 1. Dette har jeg ikke gjort noe med i forbedringstiltaket, ettersom det er litt utenfor det oppgaven spør etter.</p>
+                    <p>Jeg har også utelatt Performance-testen av samme grunn: jeg har ikke gjort noe med bildestørrelsene på siden, ettersom dette ikke var hovedfokus for oppgaven, og jeg lastet ned den minste filen tilgjengelig fra Pixabay da jeg lastet ned bildene.</p>
+                    <p>I Webaim-analysene er det nå kun de alertene som jeg har valgt å ikke gjøre noe med, som gjenstår. Alle errors er borte. Forbedringstiltakene har gitt meg en bedre score både i Lighthouse og i Webaim. Dette er fordi jeg har basert forbedringstiltakene på tilbakemeldingene jeg fikk av disse analysene.</p>
+                </section>
+                <section>
+                    <h2>Tilgjengelighet</h2>
+                    <article>
+                        <h3>Skjermleserkompatibilitet</h3>
+                        <p>Dette er utfordringene jeg har støtt på ved å teste skjermleser på mine nettsider:</p>
+                        <ul>
+                            <li>Skjermlesere som har norsk tale, leser ikke godt engelsk. Dette kan by på utfordringer på norske sider som også benytter noen engelske uttrykk</li>
+                            <li>Skjermleseren leser ikke opp innholdet i hamburgermenyen når nettsidene er i mobilformat</li>
+                            <li></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Tastaturnavigasjon</h3>
+                        <p>Nettstedet kan navigeres med kun tastatur. Unntaket er at man ikke kommer inn på hamburgermenyen i mobilvisningen via tastatur, ettersom jeg ikke har lagt på en EventListener for dette i Javascript. Det går utover oppgavens omfang, og er dessuten sannsynligvis lite relevant, ettersom tastaturnavigasjon blir benyttet i desktopvisning, der hamburgermenyen er erstattet av en vanlig navigasjonsmeny.</p>
+                        <p>Jeg har lagt på en snarvei til hovedinnholdet på sidene mine, for å sørge for at de som benytter seg av tastaturnavigering og skjermleser har mulighet til å hoppe rett til det de er interesserte i på siden.</p>
+                    </article>
                 </section>
             </main>
             <footer>
