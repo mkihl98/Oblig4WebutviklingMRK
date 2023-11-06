@@ -899,6 +899,7 @@ body{
                 flex-direction: row;
                 flex-wrap: wrap;
                 align-items: baseline;
+                background-color: #f1eedb;
 
                 h2{
                     width: 100%;
@@ -968,6 +969,7 @@ body{
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: baseline;
+                background-color: #f1eedb;
 
                 h2{
                     width: 100%;
@@ -1073,6 +1075,21 @@ body{
                     img{
                         padding: 1rem 0;
                     }
+                }
+            }
+
+            #tilgjengelighet{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                background-color: #f1eedb;
+                padding: 0 0 1rem 0;
+
+                h2{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
                 }
             }
         }
@@ -1206,7 +1223,27 @@ body{
     color: #f0b510;
 }
 
-/*Kilde for oppsett av rette linjer i CSS: https://www.shecodes.io/athena/5273-create-straight-and-horizontal-lines-with-css*/
+/*Kilde for oppsett av rette linjer i CSS: https://www.shecodes.io/athena/5273-create-straight-and-horizontal-lines-with-css */
 .linje{
     border-bottom: 2px solid #000;
+}
+
+/*Justering av "skip til hovedinnhold"-knapp. Kilde for CSS-oppsett av denne knappen: https://www.w3schools.com/accessibility/accessibility_skip_links.php */
+.skip{
+    position: absolute;
+    left: -1000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip:focus{
+    position: relative;
+    left: auto;
+    width: auto;
+    height: auto;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: #ffffff;
 }
