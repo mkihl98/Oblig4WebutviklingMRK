@@ -44,7 +44,7 @@
                     </ul>
                 </nav>
             </header>
-            <main id="hovedinnhold">
+            <main id="hovedinnhold" itemscope itemtype="https://schema.org/Product">
                 <section class="breadcrumb">
                     <a href="index.html">Hjem</a>
                     <p>></p>
@@ -54,7 +54,7 @@
                 </section>
                 <section id="produktbilde">
                     <article>
-                        <img src="img/product-1.jpg" alt="En blå joggesko">
+                        <img src="img/product-1.jpg" alt="En blå joggesko" itemprop="image">
                         <p class="bildekilde">Bildet er tatt av <a href="https://pixabay.com/no/users/stux-12364/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371625">Stefan Schweihofer</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371625">Pixabay</a></p>
                     </article>
                 </section>
@@ -80,21 +80,24 @@
                     </article>
                 </section>
                 <section id="produkt-info">
-                    <h2 class="text-right">Produkt 1</h2>
-                    <p id="pris" class="text-right">1299 kr</p>
+                    <h2 class="text-right" itemprop="name">Produkt 1</h2>
+                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="NOK">
+                        <p id="pris" class="text-right" itemprop="price" content="1299.00">1299 kr</p>
+                    </div>
                     <form method="post">
                         <label for="size">Velg størrelse:</label>
                         <select id="size" name="size">
-                            <option>36</option>
-                            <option>37</option>
-                            <option>38</option>
-                            <option>39</option>
-                            <option>40</option>
-                            <option>41</option>
-                            <option>42</option>
-                            <option>40</option>
-                            <option>44</option>
-                            <option>45</option>
+                            <option value="36" itemprop="size">36</option>
+                            <option value="37" itemprop="size">37</option>
+                            <option value="38" itemprop="size">38</option>
+                            <option value="39" itemprop="size">39</option>
+                            <option value="40" itemprop="size">40</option>
+                            <option value="41" itemprop="size">41</option>
+                            <option value="42" itemprop="size">42</option>
+                            <option value="43" itemprop="size">40</option>
+                            <option value="44" itemprop="size">44</option>
+                            <option value="45" itemprop="size">45</option>
                         </select>
                     </form>
                     <a href="#">Legg til i handlevogn</a>
@@ -125,6 +128,7 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star-half-stroke"></i>
+                        <p>Dobby the House Elf</p>
                         <p>"Your Wheezy, sir, your Wheezy-Wheezy who is giving Dobby his sweater!"</p>
                     </article>
                     <article class="linje">
@@ -141,6 +145,7 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star-half-stroke"></i>
+                        <p>Hermione Granger</p>
                         <p>"If you ask me, Mr. Crouch is very lucky no one at the Daily Prophet knows how mean he is to elves!"</p>
                     </article>
                 </section>
