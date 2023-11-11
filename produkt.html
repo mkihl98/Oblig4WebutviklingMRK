@@ -81,6 +81,10 @@
                 </section>
                 <section id="produkt-info">
                     <h2 class="text-right" itemprop="name">Produkt 1</h2>
+                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                        <meta itemprop="reviewCount" content="3">
+                        <meta itemprop="ratingValue" content="4.7">
+                    </div>
                     <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         <meta itemprop="priceCurrency" content="NOK">
                         <p id="pris" class="text-right" itemprop="price" content="1299.00">1299 kr</p>
@@ -122,31 +126,38 @@
                 </section>
                 <section id="kundevurderinger">
                     <h3>Kundevurderinger</h3>
-                    <article class="linje">
+                    <article class="linje" itemprop="review" itemscope itemtype="https://schema.org/Review">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star-half-stroke"></i>
-                        <p>Dobby the House Elf</p>
-                        <p>"Your Wheezy, sir, your Wheezy-Wheezy who is giving Dobby his sweater!"</p>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <p itemprop="name">Dobby the House Elf</p>
+                        </div>
+                        <p itemprop="reviewBody">"Your Wheezy, sir, your Wheezy-Wheezy who is giving Dobby his sweater!"</p>
                     </article>
-                    <article class="linje">
+                    <article class="linje" itemprop="review" itemscope itemtype="https://schema.org/Review">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                        <p>"I've been putting out fires all week. People keep sending Howlers, and of course, if you don't open a Howler straight away, it explodes. Scorch marks all over my desk and my best quill reduced to cinders."</p>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <p itemprop="name">Percy Weasley</p>
+                        </div>
+                        <p itemprop="reviewBody">"I've been putting out fires all week. People keep sending Howlers, and of course, if you don't open a Howler straight away, it explodes. Scorch marks all over my desk and my best quill reduced to cinders."</p>
                     </article>
-                    <article class="linje">
+                    <article class="linje" itemprop="review" itemscope itemtype="https://schema.org/Review">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star-half-stroke"></i>
-                        <p>Hermione Granger</p>
-                        <p>"If you ask me, Mr. Crouch is very lucky no one at the Daily Prophet knows how mean he is to elves!"</p>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <p itemprop="name">Hermione Granger</p>
+                        </div>
+                        <p itemprop="reviewBody">"If you ask me, Mr. Crouch is very lucky no one at the Daily Prophet knows how mean he is to elves!"</p>
                     </article>
                 </section>
             </main>
