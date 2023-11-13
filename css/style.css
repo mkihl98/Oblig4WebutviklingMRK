@@ -525,7 +525,10 @@ body #grid-produkt-layout main #produkt-info .text-right {
   margin: 0;
   font-size: 2rem;
 }
-body #grid-produkt-layout main #produkt-info #pris {
+body #grid-produkt-layout main #produkt-info div {
+  width: 50%;
+}
+body #grid-produkt-layout main #produkt-info div #pris {
   display: flex;
   justify-content: end;
 }

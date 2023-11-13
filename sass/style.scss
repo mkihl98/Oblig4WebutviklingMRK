@@ -658,9 +658,13 @@ body{
                     font-size: 2rem;
                 }
 
-                #pris{
-                    display: flex;
-                    justify-content: end;
+                div{
+                    width: 50%;
+
+                    #pris{
+                        display: flex;
+                        justify-content: end;
+                    }
                 }
 
                 form{
